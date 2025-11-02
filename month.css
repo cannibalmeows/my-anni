@@ -61,6 +61,7 @@ body {
 
         & img {
             border-radius: 10px;
+            border: 2px orange solid;
             transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
 
@@ -69,5 +70,32 @@ body {
             transform: scale(1.2);
         }
 
+    }
+}
+
+.imageContainer {
+
+    & .smile {
+        rotate: 8deg;
+    }
+
+    & .hoco {
+        rotate: -8deg;
+    }
+
+    & .spaced {
+        rotate: 8deg;
+    }
+
+    & .back {
+        rotate: -8deg;
+    }
+
+    & .kiss {
+        rotate: 8deg;
+    }
+
+    & .zombie {
+        rotate: -8deg;
     }
 }
