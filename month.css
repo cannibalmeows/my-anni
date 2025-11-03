@@ -11,21 +11,24 @@ body {
     background-color: #D62828;
 }
 
-.header {
 
-    background-color: #F77F00;
-    width: 90vw;
-    text-align: center;
-    padding: 1rem;
-    color: #EAE2B7;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
 
 .headContainer {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+
+    & .header {
+
+        background-color: #F77F00;
+        width: 90vw;
+        text-align: center;
+        padding: 1rem;
+        color: #EAE2B7;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
 }
 
 .letterContainer {
@@ -99,4 +102,109 @@ body {
     & .zombie {
         rotate: -8deg;
     }
+}
+
+.pictureContainer h1 {
+    text-align: center;
+    color: orange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Stuff for the java and animations for the sidebar */
+
+.toggle-btn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+    background: #EAE2B7;
+    color: #161616;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+/* Sidebar base style */
+.sidebar {
+    position: fixed;
+    left: -220px;
+    /* hidden by default */
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background: #FCBF49;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+/* When open */
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar h2 {
+    margin-bottom: 15px;
+}
+
+.sidebar .tab {
+    background-color: #D62828;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar .tab:nth-child(1) {
+    margin-top: 5rem;
+}
+
+.sidebar .tab:hover {
+    background: #D62828;
+    transform: scale(1.1);
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+/* Push content when sidebar opens */
+.sidebar.open~.content {
+    margin-left: 200px;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
 }

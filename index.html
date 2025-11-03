@@ -9,63 +9,137 @@
 </head>
 
 <body>
-    <div class="headContainer">
-        <div class="header">
+    <button id="toggleSidebar" class="toggle-btn">☰</button>
 
-            <h1>Happy Six Month Anniversary!</h1>
-        </div>
-    </div>
     <div class="container">
 
+        <aside class="sidebar">
+            <button class="tab" data-target="home">Home</button>
+            <button class="tab" data-target="memories">Memories</button>
+
+        </aside>
+        <main>
+            <section id="home" class="page active">
+                <div class="headContainer">
+                    <div class="header">
+
+                        <h1>Happy Six Month Anniversary!</h1>
+                    </div>
+                </div>
+                <div class="anyting">
 
 
 
-        <div class="letterContainer">
 
-            <div class="imageContainer">
+                    <div class="letterContainer">
 
-                <img src="100_0260.JPG" alt="" class="smile">
+                        <div class="imageContainer">
 
-                <img src="100_0187.JPG" alt="" class="hoco">
+                            <img src="100_0260.JPG" alt="" class="smile">
 
-                <img src="100_0275.JPG" alt="" class="spaced">
+                            <img src="100_0187.JPG" alt="" class="hoco">
 
-            </div>
+                            <img src="100_0275.JPG" alt="" class="spaced">
 
-            <div class="letter">
+                        </div>
 
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio accusamus repellat vitae ratione at,
-                    minus ipsa, alias saepe unde optio, adipisci pariatur officiis laudantium sit vero autem ad aliquid
-                    quam?
-                    Mollitia placeat, blanditiis inventore illo eos deleniti laudantium laboriosam quod hic eum
-                    quibusdam numquam quia commodi explicabo doloribus sed quas? Ratione omnis facere, repudiandae
-                    perspiciatis at eius provident consectetur maxime.
-                    Quod ullam explicabo veritatis facere repudiandae aperiam sequi maiores minima, necessitatibus totam
-                    fuga excepturi tempora harum error quos deserunt exercitationem cupiditate minus. Facere dolor nam,
-                    pariatur explicabo reprehenderit nemo non.
-                    Explicabo necessitatibus expedita id quidem, numquam nisi iusto mollitia temporibus possimus dolorem
-                    beatae eligendi. Reiciendis excepturi voluptatum ut laudantium, iure quidem fugit maiores in quos
-                    nemo et perspiciatis accusantium nam!
-                    Facere optio maxime sit delectus quidem similique id ratione odio necessitatibus aut harum ex dolore
-                    aperiam, recusandae sint, quod cum? Eos, odit. Repellendus, velit sequi veniam doloribus ab
-                    provident tempora? </p>
-            </div>
+                        <div class="letter">
 
-            <div class="imageContainer">
-                <img src="100_0259.JPG" alt="" class="back">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio accusamus repellat vitae
+                                ratione
+                                at,
+                                minus ipsa, alias saepe unde optio, adipisci pariatur officiis laudantium sit vero autem
+                                ad
+                                aliquid
+                                quam?
+                                Mollitia placeat, blanditiis inventore illo eos deleniti laudantium laboriosam quod hic
+                                eum
+                                quibusdam numquam quia commodi explicabo doloribus sed quas? Ratione omnis facere,
+                                repudiandae
+                                perspiciatis at eius provident consectetur maxime.
+                                Quod ullam explicabo veritatis facere repudiandae aperiam sequi maiores minima,
+                                necessitatibus
+                                totam
+                                fuga excepturi tempora harum error quos deserunt exercitationem cupiditate minus. Facere
+                                dolor
+                                nam,
+                                pariatur explicabo reprehenderit nemo non.
+                                Explicabo necessitatibus expedita id quidem, numquam nisi iusto mollitia temporibus
+                                possimus
+                                dolorem
+                                beatae eligendi. Reiciendis excepturi voluptatum ut laudantium, iure quidem fugit
+                                maiores in
+                                quos
+                                nemo et perspiciatis accusantium nam!
+                                Facere optio maxime sit delectus quidem similique id ratione odio necessitatibus aut
+                                harum ex
+                                dolore
+                                aperiam, recusandae sint, quod cum? Eos, odit. Repellendus, velit sequi veniam doloribus
+                                ab
+                                provident tempora? </p>
+                        </div>
 
-                <img src="100_0308.JPG" alt="" class="kiss">
+                        <div class="imageContainer">
+                            <img src="100_0259.JPG" alt="" class="back">
 
-                <img src="100_0288.JPG" alt="" class="zombie">
-            </div>
-        </div>
+                            <img src="100_0308.JPG" alt="" class="kiss">
 
+                            <img src="100_0288.JPG" alt="" class="zombie">
+                        </div>
+                    </div>
+
+
+            </section>
+
+            <section id="memories" class="page">
+                <div class="headContainer">
+                    <div class="header">
+                        <h1>Memories</h1>
+                    </div>
+                </div>
+
+                <div class="pictureContainer">
+                    <h1>Coming soon!</h1>
+
+                </div>
+
+
+            </section>
+
+        </main>
+    </div>
 
 
 
     </div>
 
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const pages = document.querySelectorAll('.page');
+        const sidebar = document.querySelector('.sidebar');
+        const toggleBtn = document.getElementById('toggleSidebar');
 
+        // Toggle sidebar visibility
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
+
+        // Switch pages
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.getAttribute('data-target');
+
+                // Hide all pages
+                pages.forEach(page => page.classList.remove('active'));
+
+                // Show selected page
+                document.getElementById(target).classList.add('active');
+
+                // Close sidebar (optional for smaller screens)
+                sidebar.classList.remove('open');
+            });
+        });
+    </script>
 
 </body>
 
