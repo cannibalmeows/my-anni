@@ -8,7 +8,7 @@ img {
 
 body {
     padding: 20px;
-    background-color: #D62828;
+    background-color: #6D2E46;
 }
 
 
@@ -17,15 +17,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
 
     & .header {
 
-        background-color: #F77F00;
+        background-color: #D5B9B2;
         width: 90%;
         text-align: center;
         padding: 1rem;
-        color: #EAE2B7;
+        color: #6D2E46;
         border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
@@ -38,23 +38,21 @@ body {
     align-items: center;
 
     & .letter {
+
         padding: 2rem;
         line-height: 40px;
         border-radius: 10px;
         text-align: center;
         margin-top: 5rem;
-        background-color: #003049;
-        color: #F77F00;
+        background-color: #CEBEBE;
+        color: #6D2E46;
         width: 50%;
-
-        & p {
-            width: 50%;
-        }
 
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
 
     & .imageContainer {
         display: grid;
@@ -65,7 +63,7 @@ body {
 
         & img {
             border-radius: 10px;
-            border: 2px orange solid;
+            border: 2px #CEBEBE solid;
             transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
 
@@ -93,8 +91,9 @@ body {
         margin: 2rem 0;
         padding: 1.5rem;
         text-align: center;
-        background-color: #003049;
-        color: #F77F00;
+        width: 100%;
+        background-color: #CEBEBE;
+        color: #6D2E46;
         border-radius: 10px;
         line-height: 1.6;
     }
@@ -118,13 +117,27 @@ body {
         width: 100px;
         /* smaller so all three fit nicely */
         border-radius: 10px;
-        border: 2px solid orange;
+        border: 2px solid #ECE2D0;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .letterContainer .imageContainer img:hover {
         transform: scale(1.1);
         box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .headContainerTwo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 390px;
+        text-align: center;
+
+        & .headerTwo {
+            width: 80vw;
+            background-color: #CEBEBE;
+
+        }
     }
 }
 
@@ -157,16 +170,22 @@ body {
 
 .pictureContainer h1 {
     text-align: center;
-    color: orange;
+    color: #ECE2D0;
 }
 
+.headContainerTwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    text-align: center;
 
+    & .headerTwo {
+        width: 90%;
+        background-color: #CEBEBE;
 
-
-
-
-
-
+    }
+}
 
 
 
@@ -179,7 +198,7 @@ body {
     top: 15px;
     left: 15px;
     z-index: 1001;
-    background: #EAE2B7;
+    background-color: #A26769;
     color: #161616;
     border: none;
     padding: 10px 15px;
@@ -201,7 +220,7 @@ body {
     top: 0;
     width: 200px;
     height: 100%;
-    background: #FCBF49;
+    background: #CEBEBE;
     color: #fff;
     padding: 20px;
     display: flex;
