@@ -130,16 +130,19 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 390px;
+        width: 82vw !important;
         text-align: center;
 
+
         & .headerTwo {
-            width: 80vw;
+            width: 60%;
             background-color: #CEBEBE;
+            border-radius: 10px;
 
         }
     }
 }
+
 
 .imageContainer {
 
@@ -197,7 +200,7 @@ body {
     position: fixed;
     top: 15px;
     left: 15px;
-    z-index: 1001;
+    z-index: 999;
     background-color: #A26769;
     color: #161616;
     border: none;
