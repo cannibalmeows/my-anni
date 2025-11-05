@@ -115,7 +115,7 @@ body {
 
     .letterContainer .imageContainer img {
         margin-top: 30px;
-        width: 120px;
+        width: 100px;
         /* smaller so all three fit nicely */
         border-radius: 10px;
         border: 2px solid orange;
